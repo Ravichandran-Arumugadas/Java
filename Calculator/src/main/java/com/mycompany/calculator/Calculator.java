@@ -1,0 +1,70 @@
+/*
+ * Nom       : Arumugadas Ravichandran
+ * Groupe    : BDML1
+ * Programme : Partie 3 : Calculator
+ * Date      : 22/09/2026
+ */
+
+package com.mycompany.calculator;
+
+import java.util.Scanner;
+
+public class Calculator {
+
+    public static void main(String[] args) {
+
+        System.out.println("Please enter the operator:");
+        System.out.println("1) add");
+        System.out.println("2) substract");
+        System.out.println("3) multiply");
+        System.out.println("4) divide");
+        System.out.println("5) modulo");
+
+        Scanner sc = new Scanner(System.in);
+
+        int operateur;
+        operateur = sc.nextInt();
+
+        // Vérification de l'opérateur
+        if (operateur < 1 || operateur > 5) {
+            System.out.println("Error: invalid operator");
+        } else {
+
+            System.out.println("Please enter the first number:");
+
+            int operande1;
+            operande1 = sc.nextInt();
+
+            System.out.println("Please enter the second number:");
+
+            int operande2;
+            operande2 = sc.nextInt();
+
+            int resultat;
+
+            switch (operateur) {
+                case 1:
+                    resultat = operande1 + operande2;
+                    break;
+
+                case 2:
+                    resultat = operande1 - operande2;
+                    break;
+
+                case 3:
+                    resultat = operande1 * operande2;
+                    break;
+
+                case 4:
+                    resultat = operande1 / operande2;
+                    break;
+
+                default:
+                    resultat = operande1 % operande2;
+                    break;
+            }
+
+            System.out.println("The result is : " + resultat);
+        }
+    }
+}
