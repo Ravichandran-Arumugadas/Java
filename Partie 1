@@ -1,0 +1,28 @@
+Partie 1
+
+/*
+ * Nom : Arumugadas Ravichandran
+ * Groupe : BDML1
+ * Rôle du programme : Programme de test / première prise en main de Java
+ * Date : 22/09/2026
+ */
+
+package com.mycompany.exo1__arumugadas;
+import java.util.Scanner;
+
+/**
+ *
+ * @author ar_ravi
+ */
+public class Exo1__Arumugadas {
+
+    public static void main(String[] args) {
+        String prenom;
+        Scanner sc;
+        sc = new Scanner(System.in);
+        System.out.println("Bonjour, quel est votre prenom ?");
+        prenom = sc.nextLine();
+        System.out.println("Bonjour " + prenom);
+        System.out.println("Au revoir " + prenom);
+    }
+}
